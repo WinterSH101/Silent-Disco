@@ -59,6 +59,18 @@
         panel2.style.backgroundColor = randomColor();
 
     }, 1500);
+    // Phase 2
+    const danceFloor = document.getElementById("danceFloor");
+    const dancer = document.getElementById("dancer");
+
+    danceFloor.addEventListener("click", function (){
+        danceFloor.style.backgroundColor = randomColor();
+    });
+
+    dancer.addEventListener("click", function (event){
+        event.stopPropagation();
+        dancer.textContent = "💃"
+    });
 
 </script>
 </body>
