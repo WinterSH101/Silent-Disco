@@ -71,7 +71,25 @@
         event.stopPropagation();
         dancer.textContent = "💃"
     });
-
+    // Phase 3
+    window.addEventListener("keydown", function (event) {
+        if(event.key === "ArrowUp"){
+            dancer.textContent = "🙌";
+        }
+        if (event.key === "ArrowDown"){
+            dancer.textContent = "🕺";
+        }
+        else if (event.key === "ArrowLeft") {
+            dancer.textContent = "💃";
+        }
+        else if (event.key === "ArrowRight"){
+            dancer.textContent = "🤸";
+        }
+        else if (event.key === "r" || event.key === "R"){
+            danceFloor.style.backgroundColor="lightgray";
+            clearInterval(panelTimer);
+        }
+    });
 </script>
 </body>
 </html>
